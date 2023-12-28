@@ -1,0 +1,85 @@
+.user {
+    display: grid;
+    grid-template-columns: 16px 1fr auto;
+    gap: 12px;
+    align-content: center;
+    border: 2px solid #ffc0cc;
+    border-radius: 3px;
+    list-style: none;
+    padding: 4px 4px 4px 12px;
+    min-width: 450px;
+}
+
+.user + .user {
+    margin: 16px 0 0;
+}
+
+.user input[type="checkbox"] {
+    all: unset;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #850000;
+    border-radius: 2px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.user input[type="checkbox"]:checked {
+    background-color: black;
+    border: 2px solid black;
+}
+
+.user input[type="checkbox"]::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: -14px;
+    right: -14px;
+}
+
+.user input {
+    color: #850000;
+    font-weight: 600;
+    font-size: 24px;
+    background-color: transparent;
+    transition: .15s ease background-color;
+    padding: 8px;
+    border: none;
+    text-overflow: ellipsis;
+}
+
+.user input:not([type="checkbox"]):hover {
+    background-color: #fff0f3;
+}
+
+.user button {
+    background-color: #ffc0cc;
+    border: none;
+    width: 80px;
+    color: #850000;
+    font-weight: 700;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s ease background-color;
+}
+
+.user button:hover {
+    background-color: #ffa4b7;
+}
+
+.user button:active {
+    background-color: #fa92a8;
+}
+
+.disabled {
+    border-color: black;
+}
+
+.disabled :is(button, input:not([type="checkbox"])) {
+    pointer-events: none;
+    user-select: none;
+    filter: saturate(0);
+}

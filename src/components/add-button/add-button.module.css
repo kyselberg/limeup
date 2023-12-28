@@ -1,0 +1,23 @@
+.addButton {
+    display: block;
+    background-color: #850000;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 3px;
+    height: 50px;
+    width: 100%;
+    border: unset;
+    cursor: pointer;
+    transition: .3s ease background-color;
+    max-width: 800px
+}
+
+.addButton:hover {
+    background-color: #700202;
+}
+
+.addButton:active {
+    background-color: #4a0101;
+}
